@@ -21,7 +21,7 @@ case $option in
 	"1")	ip_add=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -v "127.0.0.1" | cut -d: -f2`;;
 	"2")	ip_add=`curl ipecho.net/plain --silent`;;
 	"3")	exit;;
-	*)		echo "Error"; exit;;
+	*)	echo "Input Error"; exit;;
 esac
 
 clear
